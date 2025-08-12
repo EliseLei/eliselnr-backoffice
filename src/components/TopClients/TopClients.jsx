@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Client from "../Clients/Client";
+import { Client } from "..";
 
 class TopClients extends Component {
   render() {

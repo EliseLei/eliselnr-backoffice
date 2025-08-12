@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import Clients from './Pages/Clients';
-import ShootingPhoto from './Pages/ShootingPhoto';
-import AddClient from './Pages/AddClient';
-import Menu from './components/Common/Menu';
-import Header from './components/Common/Header';
+import { Home, Clients, ShootingPhoto, AddShootingPhoto, AddClient } from './pages';
+import { Menu, Header } from './components';
+
 
 function App() {
   const [clients, setClients] = useState([]);
@@ -23,8 +20,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shooting-photo" element={<ShootingPhoto />} />
-            <Route path="/clients" element={<Clients clients={clients} />} />
-            <Route path="/add-client" element={<AddClient onAddClient={handleAddClient} />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/add-client" element={<AddClient />} />
+            <Route path="/add-shooting-photo" element={<AddShootingPhoto />} />
           </Routes>
         </div>
       </div>

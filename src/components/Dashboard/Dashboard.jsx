@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DataHighlighted from "./DataHighlighted";
+import { DataHighlighted } from "..";
 
 class Dashboard extends Component {
   render() {

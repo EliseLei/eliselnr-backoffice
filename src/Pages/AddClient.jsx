@@ -1,5 +1,5 @@
 import { Component } from "react";
-import AddClientForm from "../components/AddClient/AddClientForm";
+import { AddClientForm } from "../components";
 
 class AddClient extends Component {
   render() {

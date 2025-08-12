@@ -1,5 +1,3 @@
-import React from "react";
-
 function Client({ lastname, firstname, price, nbShootingPhoto }) {
   return (
     <div
@@ -10,9 +8,7 @@ function Client({ lastname, firstname, price, nbShootingPhoto }) {
       <div>{firstname}</div>
       <div>{price} €</div>
       <div>{nbShootingPhoto}</div>
-      <div>
-        <button className="text-blue-500 hover:underline">Modifier</button>
-      </div>
+      <div>....</div>
     </div>
   );
 }

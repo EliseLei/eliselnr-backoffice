@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Client from "./Client";
+import { Client } from "..";
 
 class ClientList extends Component {
   render() {

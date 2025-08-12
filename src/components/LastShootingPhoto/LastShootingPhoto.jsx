@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ShootingPhoto from "../ShootingPhoto/ShootingPhoto";
+import { ShootingPhoto } from "..";
 
 class LastShootingPhoto extends Component {
   render() {

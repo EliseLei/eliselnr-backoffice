@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import TopClients from "../components/TopClients/TopClients";
-import Dashboard from "../components/Dashboard/Dashboard";
-import LastShootingPhoto from "../components/LastShootingPhoto/LastShootingPhoto";
+import { LastShootingPhoto, Dashboard, TopClients } from "../components";
 
 class Home extends Component {
   render() {

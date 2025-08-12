@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ShootingPhotoList from "../components/ShootingPhoto/ShootingPhotoList";
+import { ShootingPhotoList } from "../components";
 
 class ShootingPhoto extends Component {
   render() {

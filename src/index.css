@@ -7,6 +7,7 @@
     --color-white: #fff;
     --color-primary:#292728;
     --color-secondary:#f7f6f9;
+    --color-primary-light: #403e3f;
 
     --color-green:#67b894;
     --color-orange:#d38d6e;
@@ -20,13 +21,56 @@ body {
 button {
     background-color: var(--color-primary);
     color:var(--color-white);
+    cursor:pointer;
 }
+
+button:hover {
+    background-color: var(--color-primary-light);
+    color:var(--color-white);
+}
+
+select {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+select:hover {
+    background-color: var(--color-primary-light);
+}
+
+input {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--color-green);
+    box-shadow: 0 0 5px var(--color-green);
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
 
 @layer utilities {
     h1 {
         font-weight:bold;
         font-size:25px;
-        pading-bottom:10px;
+        padding-bottom:10px;
     }
     h2 {
         font-weight:bold;

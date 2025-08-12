@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class AddClient extends Component {
+class AddClientForm extends Component {
   render() {
     return (
       <>
@@ -20,4 +20,4 @@ class AddClient extends Component {
   }
 }
 
-export default AddClient;
+export default AddClientForm;
