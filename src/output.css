@@ -170,6 +170,12 @@
   }
 }
 @layer utilities {
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -253,6 +259,9 @@
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
   }
   .p-10 {
     padding: calc(var(--spacing) * 10);
@@ -372,6 +381,9 @@ input::placeholder {
     background-color: var(--color-primary);
   }
   .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .hover-bg-secondary:hover {
     background-color: var(--color-secondary);
   }
 }

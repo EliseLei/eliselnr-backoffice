@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home, Clients, ShootingPhoto, AddShootingPhoto, AddClient } from './pages';
+import { Home, Clients, ClientDetails, ShootingPhoto, AddShootingPhoto, AddClient } from './pages';
 import { Menu, Header } from './components';
 
 
@@ -14,6 +14,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/shooting-photo" element={<ShootingPhoto />} />
             <Route path="/clients" element={<Clients />} />
+            <Route path="/client-detail" element={<ClientDetails />} />
             <Route path="/add-client" element={<AddClient />} />
             <Route path="/add-shooting-photo" element={<AddShootingPhoto />} />
           </Routes>

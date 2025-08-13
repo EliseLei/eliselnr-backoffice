@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Client } from "..";
+import { NavLink } from "react-router-dom";
 
 class ClientList extends Component {
   render() {
@@ -13,48 +14,62 @@ class ClientList extends Component {
           <div>Action</div>
         </div>
 
-        <Client
-          lastname="Elise"
-          firstname="Leininger"
-          price={120}
-          nbShootingPhoto={3}
-        />
-        <Client
-          lastname="Jean"
-          firstname="Dupont"
-          price={250}
-          nbShootingPhoto={3}
-        />
-        <Client
-          lastname="Marie"
-          firstname="Durand"
-          price={300}
-          nbShootingPhoto={3}
-        />
-        <Client
-          lastname="Jean"
-          firstname="Dupont"
-          price={250}
-          nbShootingPhoto={3}
-        />
-        <Client
-          lastname="Marie"
-          firstname="Durand"
-          price={300}
-          nbShootingPhoto={3}
-        />
-        <Client
-          lastname="Jean"
-          firstname="Dupont"
-          price={250}
-          nbShootingPhoto={3}
-        />
-        <Client
-          lastname="Marie"
-          firstname="Durand"
-          price={300}
-          nbShootingPhoto={3}
-        />
+        <NavLink to="/client-detail">
+          <Client
+            lastname="Elise"
+            firstname="Leininger"
+            price={120}
+            nbShootingPhoto={3}
+          />
+        </NavLink>
+        <NavLink to="/client-detail">
+          <Client
+            lastname="Jean"
+            firstname="Dupont"
+            price={250}
+            nbShootingPhoto={3}
+          />
+        </NavLink>
+        <NavLink to="/client-detail">
+          <Client
+            lastname="Marie"
+            firstname="Durand"
+            price={300}
+            nbShootingPhoto={3}
+          />
+        </NavLink>
+        <NavLink to="/client-detail">
+          <Client
+            lastname="Jean"
+            firstname="Dupont"
+            price={250}
+            nbShootingPhoto={3}
+          />
+        </NavLink>
+        <NavLink to="/client-detail">
+          <Client
+            lastname="Marie"
+            firstname="Durand"
+            price={300}
+            nbShootingPhoto={3}
+          />
+        </NavLink>
+        <NavLink to="/client-detail">
+          <Client
+            lastname="Jean"
+            firstname="Dupont"
+            price={250}
+            nbShootingPhoto={3}
+          />
+        </NavLink>
+        <NavLink to="/client-detail">
+          <Client
+            lastname="Marie"
+            firstname="Durand"
+            price={300}
+            nbShootingPhoto={3}
+          />
+        </NavLink>
       </>
     );
   }
