@@ -17,10 +17,10 @@ export { default as Navbar } from './Common/Navbar';
 
 //Dashboard
 export { default as Dashboard } from './Dashboard/Dashboard';
-export { default as DataHighlighted } from './Dashboard/DataHighlighted';
+export { default as Statistique } from './Dashboard/Statistique';
 
 //ShootingPhoto
-export { default as LastShootingPhoto } from './LastShootingPhoto/LastShootingPhoto';
-export { default as ShootingPhoto } from './ShootingPhoto/ShootingPhoto';
-export { default as ShootingPhotoList } from './ShootingPhoto/ShootingPhotoList';
-export { default as ShootingCard } from './ShootingPhoto/ShootingCard';
+export { default as LastShootings } from './LastShootings/LastShootings';
+export { default as ShootingSummary } from './Shootings/ShootingSummary';
+export { default as ShootingList } from './Shootings/ShootingsList';
+export { default as ShootingCard } from './Shootings/ShootingCard';

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { LastShootingPhoto, Dashboard, TopClients } from "../components";
+import { LastShootings, Dashboard, TopClients } from "../components";
 
 class Home extends Component {
   render() {
@@ -13,7 +13,7 @@ class Home extends Component {
               <TopClients />
             </div>
             <div>
-              <LastShootingPhoto />
+              <LastShootings />
             </div>
           </div>
         </div>

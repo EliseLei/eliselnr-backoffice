@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class ShootingPhoto extends Component {
+class ShootingSummary extends Component {
   render() {
     const { lastname, firstname, price } = this.props;
 
@@ -20,4 +20,4 @@ class ShootingPhoto extends Component {
   }
 }
 
-export default ShootingPhoto;
+export default ShootingSummary;

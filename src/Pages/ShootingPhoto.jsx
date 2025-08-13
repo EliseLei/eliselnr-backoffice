@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { ShootingPhotoList } from "../components";
+import { ShootingList } from "../components";
 
 class ShootingPhoto extends Component {
   render() {
@@ -7,7 +7,7 @@ class ShootingPhoto extends Component {
       <div className="p-10">
         <h1>Mes séances photos</h1>
 
-        <ShootingPhotoList />
+        <ShootingList />
       </div>
     );
   }

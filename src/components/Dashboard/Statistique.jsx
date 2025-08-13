@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class DataHighlighted extends Component {
+class Statistique extends Component {
   render() {
     return (
       <div className="flex text-center items-center flex-col justify-center bg-secondary p-10">
@@ -11,4 +11,4 @@ class DataHighlighted extends Component {
   }
 }
 
-export default DataHighlighted;
+export default Statistique;

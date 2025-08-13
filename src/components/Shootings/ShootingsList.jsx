@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { ShootingPhoto, Button } from "..";
+import { ShootingSummary, Button } from "..";
 
-class ShootingPhotoList extends Component {
+class ShootingsList extends Component {
   render() {
     return (
       <>
@@ -16,12 +16,12 @@ class ShootingPhotoList extends Component {
           <div>Action</div>
         </div>
 
-        <ShootingPhoto lastname="Elise" firstname="Leininger" price={80} />
-        <ShootingPhoto lastname="Jean" firstname="Dupont" price={80} />
-        <ShootingPhoto lastname="Marie" firstname="Durand" price={80} />
+        <ShootingSummary lastname="Elise" firstname="Leininger" price={80} />
+        <ShootingSummary lastname="Jean" firstname="Dupont" price={80} />
+        <ShootingSummary lastname="Marie" firstname="Durand" price={80} />
       </>
     );
   }
 }
 
-export default ShootingPhotoList;
+export default ShootingsList;
