@@ -1,6 +1,7 @@
 //Clients
 export { default as AddClientForm } from './AddClient/AddClientForm';
 export { default as Client } from './Clients/Client';
+export { default as ClientInfo } from './Clients/ClientInfo';
 export { default as ClientList } from './Clients/ClientList';
 export { default as TopClients } from './TopClients/TopClients';
 
@@ -22,3 +23,4 @@ export { default as DataHighlighted } from './Dashboard/DataHighlighted';
 export { default as LastShootingPhoto } from './LastShootingPhoto/LastShootingPhoto';
 export { default as ShootingPhoto } from './ShootingPhoto/ShootingPhoto';
 export { default as ShootingPhotoList } from './ShootingPhoto/ShootingPhotoList';
+export { default as ShootingCard } from './ShootingPhoto/ShootingCard';
