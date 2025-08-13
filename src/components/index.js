@@ -24,3 +24,4 @@ export { default as LastShootings } from './LastShootings/LastShootings';
 export { default as ShootingSummary } from './Shootings/ShootingSummary';
 export { default as ShootingList } from './Shootings/ShootingsList';
 export { default as ShootingCard } from './Shootings/ShootingCard';
+export { default as Status } from './Shootings/Status';

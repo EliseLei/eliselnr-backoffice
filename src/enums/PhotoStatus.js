@@ -1,7 +1,7 @@
 export const PhotoStatus = Object.freeze({
   DEPOSIT_PAID: "Acompte payé",
-  SESSION_TO_SCHEDULE: "Séance photo à fixer",
-  SESSION_SCHEDULED: "Séance photo fixée",
+  SESSION_TO_SCHEDULE: "Date à fixer",
+  SESSION_SCHEDULED: "Date fixée",
   SELECTION_TO_SEND: "Sélection à envoyer",
   SELECTION_SENDED: "Sélection envoyée",
   WAITING_SECOND_PAYMENT: "En attente du deuxième paiement",
