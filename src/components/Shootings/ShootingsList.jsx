@@ -1,45 +1,101 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { ShootingSummary, Button } from "..";
+import { ShootingSummary, Button, StatusBadge } from "..";
 import { ShootingType, PhotoStatus } from "../../enums";
 
 class ShootingsList extends Component {
   render() {
+    const shootings = [
+      {
+        lastname: "Elise",
+        firstname: "Leininger",
+        price: 80,
+        type: ShootingType.FORMULA_1P_10PHOTOS,
+        status: "DEPOSIT_PAID",
+      },
+      {
+        lastname: "Jean",
+        firstname: "Dupont",
+        price: 120,
+        type: ShootingType.FORMULA_2P_10PHOTOS,
+        status: "SESSION_TO_SCHEDULE",
+      },
+      {
+        lastname: "Marie",
+        firstname: "Durand",
+        price: 50,
+        type: ShootingType.POLA,
+        status: "SESSION_SCHEDULED",
+      },
+      {
+        lastname: "Paul",
+        firstname: "Martin",
+        price: 70,
+        type: ShootingType.POLA,
+        status: "SELECTION_TO_SEND",
+      },
+      {
+        lastname: "Claire",
+        firstname: "Dubois",
+        price: 90,
+        type: ShootingType.FORMULA_1P_10PHOTOS,
+        status: "SELECTION_SENDED",
+      },
+      {
+        lastname: "Luc",
+        firstname: "Moreau",
+        price: 60,
+        type: ShootingType.FORMULA_2P_10PHOTOS,
+        status: "WAITING_SECOND_PAYMENT",
+      },
+      {
+        lastname: "Anna",
+        firstname: "Petit",
+        price: 100,
+        type: ShootingType.POLA,
+        status: "PHOTOS_TO_EDIT",
+      },
+      {
+        lastname: "Marc",
+        firstname: "Lemoine",
+        price: 110,
+        type: ShootingType.FORMULA_1P_10PHOTOS,
+        status: "PHOTOS_SENT",
+      },
+      {
+        lastname: "Sophie",
+        firstname: "Laurent",
+        price: 130,
+        type: ShootingType.FORMULA_2P_10PHOTOS,
+        status: "COMPLETED",
+      },
+    ];
+
     return (
       <>
         <NavLink to="/add-shooting-photo" className="py-4">
           <Button label="Ajouter une séance photo" />
         </NavLink>
+
         <div className="grid grid-cols-6 gap-4 p-3 font-semibold">
           <div>Nom</div>
           <div>Prénom</div>
-          <div>Prix total</div>
-          <div>Type Shooting</div>
+          <div>Prix</div>
+          <div>Type</div>
           <div>Statut</div>
           <div>Action</div>
         </div>
 
-        <ShootingSummary
-          lastname="Elise"
-          firstname="Leininger"
-          price={80}
-          type={ShootingType.FORMULA_1P_10PHOTOS}
-          status={PhotoStatus.DEPOSIT_PAID}
-        />
-        <ShootingSummary
-          lastname="Jean"
-          firstname="Dupont"
-          price={120}
-          type={ShootingType.FORMULA_2P_10PHOTOS}
-          status={PhotoStatus.SESSION_SCHEDULED}
-        />
-        <ShootingSummary
-          lastname="Marie"
-          firstname="Durand"
-          price={50}
-          type={ShootingType.POLA}
-          status={PhotoStatus.PHOTOS_TO_EDIT}
-        />
+        {shootings.map((shooting, index) => (
+          <ShootingSummary
+            key={index}
+            lastname={shooting.lastname}
+            firstname={shooting.firstname}
+            price={shooting.price}
+            type={shooting.type}
+            status={shooting.status}
+          />
+        ))}
       </>
     );
   }

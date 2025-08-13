@@ -12,6 +12,17 @@
     --color-green:#67b894;
     --color-orange:#d38d6e;
     --color-red:#cf3d3d;
+
+     /* Statuts photos */
+    --status-deposit-paid: var(--color-green);      
+    --status-session-to-schedule: var(--color-orange); 
+    --status-session-scheduled: var(--color-green);  
+    --status-selection-to-send: var(--color-orange); 
+    --status-selection-sended: var(--color-green);   
+    --status-waiting-second-payment:var(--color-orange);
+    --status-photos-to-edit: var(--color-orange);  
+    --status-photos-sent: var(--color-green);        
+    --status-completed: var(--color-primary);         
 }
 
 body {
@@ -85,4 +96,20 @@ input::placeholder {
     .hover-bg-secondary:hover {
         background-color: var(--color-secondary);
     }
+
+    /* Statuts photos */
+    .bg-status-deposit-paid { background-color: var(--status-deposit-paid); }
+    .bg-status-session-to-schedule { background-color: var(--status-session-to-schedule); }
+    .bg-status-session-scheduled { background-color: var(--status-session-scheduled); }
+    .bg-status-selection-to-send { background-color: var(--status-selection-to-send); }
+    .bg-status-selection-sended { background-color: var(--status-selection-sended); }
+    .bg-status-waiting-second-payment { background-color: var(--status-waiting-second-payment); }
+    .bg-status-photos-to-edit { background-color: var(--status-photos-to-edit); }
+    .bg-status-photos-sent { background-color: var(--status-photos-sent); }
+    .bg-status-completed { background-color: var(--status-completed); }
+
+    /* Tu peux aussi faire une classe générique pour le texte blanc sur ces badges */
+    .text-white { color: var(--color-white); }
+    .rounded-badge { border-radius: 9999px; padding: 2px 8px; font-size: 12px; font-weight: bold; display: inline-block; }
+
 }
