@@ -2,13 +2,14 @@ import React, { Component } from "react";
 
 class Button extends Component {
   render() {
-    const { label, type = "button", onClick } = this.props;
+    const { label, icon, type = "button", onClick } = this.props;
     return (
       <button
         type={type}
         onClick={onClick}
-        className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-light transition cursor-pointer"
+        className="inline-flex bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-light transition cursor-pointer"
       >
+        {icon && <span className="pr-2">{icon}</span>}
         {label}
       </button>
     );

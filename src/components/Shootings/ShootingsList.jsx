@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { ShootingSummary, Button, StatusBadge } from "..";
-import { ShootingType, PhotoStatus } from "../../enums";
+import { ShootingSummary, Button } from "..";
+import { ShootingType } from "../../enums";
+import { PlusCircle } from "../Icons";
 
 class ShootingsList extends Component {
   render() {
@@ -74,7 +75,7 @@ class ShootingsList extends Component {
     return (
       <>
         <NavLink to="/add-shooting-photo" className="py-4">
-          <Button label="Ajouter une séance photo" />
+          <Button label="Ajouter une séance photo" icon={<PlusCircle />} />
         </NavLink>
 
         <div className="mt-10 grid grid-cols-5 gap-4 p-3 font-semibold">
