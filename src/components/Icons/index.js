@@ -1,5 +1,6 @@
 export { default as Camera } from './Camera';
 export { default as ChartPie } from './ChartPie';
+export { default as CurrencyEuro } from './CurrencyEuro';
 export { default as Gift } from './Gift';
 export { default as PencilSquare } from './PencilSquare';
 export { default as PlusCircle } from './PlusCircle';

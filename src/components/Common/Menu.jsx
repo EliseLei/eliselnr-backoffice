@@ -5,7 +5,7 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="min-h-screen p-5 bg-secondary">
-        <p className="">EliseLNR</p>
+        <p>EliseLNR</p>
         <Navbar />
       </div>
     );
