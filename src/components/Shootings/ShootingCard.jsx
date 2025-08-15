@@ -8,10 +8,8 @@ function ShootingCard({ title, type, price, date, status, comment }) {
         <PencilSquare />
       </button>
 
-      {/* Titre */}
       <h2>{title}</h2>
 
-      {/* Infos principales */}
       <div className="grid grid-cols-2 gap-y-2 gap-x-6 text-sm">
         <div className="font-semibold text-gray-600">Type :</div>
         <div>{type}</div>
@@ -32,7 +30,6 @@ function ShootingCard({ title, type, price, date, status, comment }) {
         </div>
       </div>
 
-      {/* Commentaire */}
       {comment && (
         <div className="mt-4 p-3 bg-white rounded-lg text-sm text-gray-700 border border-gray-200">
           <span className="block font-semibold text-gray-500 mb-1">
