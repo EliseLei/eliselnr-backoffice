@@ -77,12 +77,11 @@ class ShootingsList extends Component {
           <Button label="Ajouter une séance photo" />
         </NavLink>
 
-        <div className="mt-10 grid grid-cols-6 gap-4 p-3 font-semibold">
-          <div>Nom</div>
-          <div>Prénom</div>
-          <div>Prix</div>
-          <div>Type</div>
+        <div className="mt-10 grid grid-cols-5 gap-4 p-3 font-semibold">
           <div>Statut</div>
+          <div>Nom complet</div>
+          <div>Type</div>
+          <div>Prix</div>
           <div>Action</div>
         </div>
 
