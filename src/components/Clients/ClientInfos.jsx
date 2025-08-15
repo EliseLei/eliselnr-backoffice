@@ -1,4 +1,4 @@
-function ClientInfo({ lastname, firstname, email, adresse, since }) {
+function ClientInfos({ lastname, firstname, email, adresse, since }) {
   const info = [
     { label: "Nom", value: lastname },
     { label: "Prénom", value: firstname },
@@ -24,4 +24,4 @@ function ClientInfo({ lastname, firstname, email, adresse, since }) {
   );
 }
 
-export default ClientInfo;
+export default ClientInfos;

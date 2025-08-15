@@ -7,6 +7,7 @@ function PlusCircle({ className = "size-5", ...props }) {
       strokeWidth={1.5}
       stroke="currentColor"
       className={className}
+      {...props}
     >
       <path
         strokeLinecap="round"
