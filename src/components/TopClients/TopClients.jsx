@@ -6,6 +6,12 @@ class TopClients extends Component {
     return (
       <>
         <h2>Top 5 des clients</h2>
+        <div className="grid grid-cols-4 gap-4 p-3 font-semibold">
+          <div>Nom complet</div>
+          <div>Total</div>
+          <div>Nb shooting photo</div>
+          <div>Action</div>
+        </div>
         <Client
           lastname="Elise"
           firstname="Leininger"

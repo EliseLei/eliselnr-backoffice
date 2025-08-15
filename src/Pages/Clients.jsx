@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { ClientList } from "../components";
+import { ClientsList } from "../components";
 
 class Clients extends Component {
   render() {
@@ -7,7 +7,7 @@ class Clients extends Component {
       <div className="p-10">
         <h1>Mes clients</h1>
 
-        <ClientList />
+        <ClientsList />
       </div>
     );
   }

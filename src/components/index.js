@@ -2,7 +2,7 @@
 export { default as AddClientForm } from './AddClient/AddClientForm';
 export { default as Client } from './Clients/Client';
 export { default as ClientInfo } from './Clients/ClientInfo';
-export { default as ClientList } from './Clients/ClientList';
+export { default as ClientsList } from './Clients/ClientsList';
 export { default as TopClients } from './TopClients/TopClients';
 
 
