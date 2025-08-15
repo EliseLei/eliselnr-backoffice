@@ -73,6 +73,8 @@ input::placeholder {
     }
     h2 {
         font-weight:bold;
+        font-size:18px;
+        padding-bottom:5px;
     }
 
     .bg-primary {

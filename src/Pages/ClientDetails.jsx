@@ -9,7 +9,7 @@ class ClientDetails extends Component {
         type: "1 séance photo pour 1 personne",
         price: 100,
         date: "10/10/2010",
-        status: "En cours",
+        status: "PHOTOS_TO_EDIT",
         comment: "Séance photo à Strasbourg",
       },
       {
@@ -17,7 +17,7 @@ class ClientDetails extends Component {
         type: "1 séance photo pour 1 personne",
         price: 100,
         date: "12/10/2023",
-        status: "En cours",
+        status: "COMPLETED",
         comment: "Séance photo à Strasbourg",
       },
     ];
