@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { ClientInfo, ShootingCard } from "../components/";
+import { ClientInfos, ShootingInfos } from "../components/";
 
 class ClientDetails extends Component {
   render() {
@@ -26,7 +26,7 @@ class ClientDetails extends Component {
       <div className="p-10">
         <h1>Info client : Pierre Dupont</h1>
 
-        <ClientInfo
+        <ClientInfos
           lastname="Dupont"
           firstname="Pierre"
           email="pierre.dupont@gmail.com"
@@ -41,7 +41,7 @@ class ClientDetails extends Component {
         </div>
 
         {shootings.map((shooting, index) => (
-          <ShootingCard key={index} {...shooting} />
+          <ShootingInfos key={index} {...shooting} />
         ))}
       </div>
     );

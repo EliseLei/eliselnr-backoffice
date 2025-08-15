@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { ShootingSummary, Button } from "..";
+import { Shooting, Button } from "..";
 import { ShootingType } from "../../enums";
 import { PlusCircle } from "../Icons";
 
@@ -87,7 +87,7 @@ class ShootingsList extends Component {
         </div>
 
         {shootings.map((shooting, index) => (
-          <ShootingSummary
+          <Shooting
             key={index}
             lastname={shooting.lastname}
             firstname={shooting.firstname}

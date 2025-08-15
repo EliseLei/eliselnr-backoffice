@@ -1,7 +1,7 @@
 import { StatusBadge } from "..";
 import { PencilSquare } from "../Icons";
 
-function ShootingCard({ title, type, price, date, status, comment }) {
+function ShootingInfos({ title, type, price, date, status, comment }) {
   return (
     <div className="mt-6 bg-secondary p-6 relative">
       <button className="absolute right-6 top-6" title="edit">
@@ -42,4 +42,4 @@ function ShootingCard({ title, type, price, date, status, comment }) {
   );
 }
 
-export default ShootingCard;
+export default ShootingInfos;

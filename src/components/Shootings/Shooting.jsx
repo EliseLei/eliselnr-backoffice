@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StatusBadge } from "..";
 import { PencilSquare } from "../Icons";
 
-class ShootingSummary extends Component {
+class Shooting extends Component {
   render() {
     const { lastname, firstname, price, type, status } = this.props;
 
@@ -28,4 +28,4 @@ class ShootingSummary extends Component {
   }
 }
 
-export default ShootingSummary;
+export default Shooting;

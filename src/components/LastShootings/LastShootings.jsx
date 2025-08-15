@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ShootingSummary } from "..";
+import { Shooting } from "..";
 import { ShootingType } from "../../enums";
 
 class LastShootings extends Component {
@@ -34,7 +34,7 @@ class LastShootings extends Component {
         status: "SELECTION_TO_SEND",
       },
       {
-        lastname: "Léa",
+        lastname: "Elise",
         firstname: "Dupuis",
         price: 120,
         type: ShootingType.POLA,
@@ -53,7 +53,7 @@ class LastShootings extends Component {
           <div>Action</div>
         </div>
         {shootings.map((shooting, index) => (
-          <ShootingSummary
+          <Shooting
             key={index}
             lastname={shooting.lastname}
             firstname={shooting.firstname}

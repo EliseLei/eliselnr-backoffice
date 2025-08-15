@@ -49,15 +49,14 @@ input {
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
     border-radius: 6px;
-    padding: 8px 12px;
+  /*  padding: 8px 12px; */
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
-    border-color: var(--color-green);
-    box-shadow: 0 0 5px var(--color-green);
+    box-shadow: 0 0 5px var(--color-primary);
 }
 
 input::placeholder {

@@ -10,7 +10,7 @@ class ClientsList extends Component {
           <div>Nom complet</div>
           <div>Email</div>
           <div>Total</div>
-          <div>Nb shooting photo</div>
+          <div>Nb shooting</div>
           <div>Action</div>
         </div>
 

@@ -11,7 +11,7 @@ function Client({ lastname, firstname, email, price, nbShootingPhoto }) {
       <div>
         {firstname} {lastname}
       </div>
-      {email && <div>{email}</div>}
+      {email && email}
       <div>{price} €</div>
       <div>{nbShootingPhoto}</div>
       <div>

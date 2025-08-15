@@ -7,7 +7,7 @@ class Button extends Component {
       <button
         type={type}
         onClick={onClick}
-        className="inline-flex bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-light transition cursor-pointer"
+        className="justify-center items-center inline-flex bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-light transition cursor-pointer"
       >
         {icon && <span className="pr-2">{icon}</span>}
         {label}
