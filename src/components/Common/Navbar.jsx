@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Camera, ChartPie, Users } from "../Icons";
+import { Camera, ChartPie, Users, Gift } from "../Icons";
 
 class Navbar extends React.Component {
   render() {
@@ -23,6 +23,12 @@ class Navbar extends React.Component {
             <li className="flex items-center">
               <Users />
               <span className="pl-2">Liste des clients</span>
+            </li>
+          </NavLink>
+          <NavLink to="/carte-cadeau" className="py-4">
+            <li className="flex items-center">
+              <Gift />
+              <span className="pl-2">Carte cadeau ?</span>
             </li>
           </NavLink>
         </ul>

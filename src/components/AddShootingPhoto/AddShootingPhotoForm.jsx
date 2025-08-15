@@ -1,46 +1,185 @@
 import React, { Component } from "react";
-import { ShootingType } from "../../enums/ShootingType";
+import { ShootingType, photoPrice } from "../../enums";
 import { Button } from "..";
 import { PlusCircle } from "../Icons";
 
 class AddShootingPhotoForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      basePrice: "",
+      reduction: "",
+      extraPhotos: 0,
+      finalTotal: "",
+      photoPrice: photoPrice,
+    };
+  }
+
+  handleBasePriceChange = (e) => {
+    this.setState({ basePrice: e.target.value }, this.updateTotal);
+  };
+
+  handleReductionChange = (e) => {
+    this.setState({ reduction: e.target.value });
+  };
+
+  handleExtraPhotosChange = (e) => {
+    this.setState({ extraPhotos: e.target.value }, this.updateTotal);
+  };
+
+  applyReduction = () => {
+    const { basePrice, reduction } = this.state;
+    const reducedBase = Math.max(0, Number(basePrice) - Number(reduction));
+    this.setState({ basePrice: reducedBase.toFixed(2) }, this.updateTotal);
+  };
+
+  updateTotal = () => {
+    const { basePrice, extraPhotos, photoPrice } = this.state;
+    const total =
+      Number(basePrice || 0) + Number(extraPhotos || 0) * photoPrice;
+    this.setState({ finalTotal: total.toFixed(2) });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Données envoyées :", this.state);
+  };
+
   render() {
+    const { basePrice, reduction, extraPhotos, finalTotal, photoPrice } =
+      this.state;
+
     return (
-      <>
+      <form onSubmit={this.handleSubmit}>
+        {/* SECTION INFOS */}
         <div className="bg-secondary p-6">
-          <form className="flex flex-col gap-4 max-w-sm">
-            <label for="client">Pour :</label>
-            <select id="prenom" name="prenom">
+          <h2>Informations</h2>
+
+          {/* Client */}
+          <div className="flex flex-col">
+            <label htmlFor="prenom" className="font-medium mb-1">
+              Pour :
+            </label>
+            <select
+              id="prenom"
+              name="prenom"
+              className="border rounded-md p-2 focus:ring-2 focus:ring-primary"
+            >
+              <option value="">-- Sélectionner --</option>
               <option value="alice">Alice</option>
               <option value="benjamin">Benjamin</option>
               <option value="charlotte">Charlotte</option>
               <option value="david">David</option>
             </select>
-            <label htmlFor="shootingphotoType">Type de séance photo :</label>
-            <select id="shootingphotoType" name="shootingphotoType">
+          </div>
+
+          {/* Type séance */}
+          <div className="flex flex-col">
+            <label for="shootingphotoType" className="font-medium mb-1">
+              Type de séance photo :
+            </label>
+            <select
+              id="shootingphotoType"
+              name="shootingphotoType"
+              className="border rounded-md p-2 focus:ring-2 focus:ring-primary"
+            >
+              <option value="">-- Sélectionner --</option>
               {Object.entries(ShootingType).map(([key, label]) => (
                 <option key={key} value={key}>
                   {label}
                 </option>
               ))}
             </select>
-            <label for="price">Prix :</label>
-            <input id="price" type="number" placeholder="prix" />
-            <label for="comment">Commentaire :</label>
-            <input
-              id="comment"
-              className="p-2 h-24"
-              type="textarea"
-              placeholder="commentaire"
-            />
-            <Button
-              type="submit"
-              label="Ajouter une séance photo"
-              icon={<PlusCircle />}
-            />
-          </form>
+          </div>
+
+          {/* Carte cadeau */}
+          <div className="flex flex-col">
+            <label htmlFor="carte" className="font-medium mb-1">
+              Carte cadeau :
+            </label>
+            <select id="carte" name="carte" className="border rounded-md p-2">
+              <option value="">-- Aucun --</option>
+              <option value="carte1">Carte cadeau 1</option>
+              <option value="carte2">Carte cadeau 2</option>
+            </select>
+          </div>
         </div>
-      </>
+
+        {/* SECTION TARIFICATION */}
+        <div className="bg-secondary p-6 mt-6">
+          <h2>Tarification</h2>
+
+          {/* Prix base */}
+          <div className="flex flex-col">
+            <label className="font-medium mb-1">Prix de base :</label>
+            <input
+              type="number"
+              value={basePrice}
+              onChange={this.handleBasePriceChange}
+              className="border rounded-md p-2 focus:ring-2 focus:ring-primary"
+            />
+          </div>
+
+          {/* Réduction */}
+          <div className="flex flex-col">
+            <label className="font-medium mb-1">Réduction :</label>
+            <div className="flex gap-2">
+              <input
+                type="number"
+                value={reduction}
+                onChange={this.handleReductionChange}
+                className="border rounded-md p-2 flex-1"
+              />
+              <Button
+                type="button"
+                onClick={this.applyReduction}
+                label="Appliquer"
+              />
+            </div>
+          </div>
+
+          {/* Photos supplémentaires */}
+          <div className="flex flex-col">
+            <label className="font-medium mb-1">
+              Photos supplémentaires ({photoPrice} € chacune) :
+            </label>
+            <input
+              type="number"
+              value={extraPhotos}
+              onChange={this.handleExtraPhotosChange}
+              className="border rounded-md p-2"
+            />
+          </div>
+
+          {/* Total */}
+          <div className="bg-white p-3 rounded-md shadow text-center mt-4">
+            <span className="block font-medium text-lg">Total à payer :</span>
+            <span className="text-2xl font-bold text-primary">
+              {finalTotal ? `${finalTotal} €` : "--"}
+            </span>
+          </div>
+        </div>
+
+        {/* SECTION AUTRES */}
+        <div className="bg-secondary p-6 mt-6">
+          <h2>Autres</h2>
+          <div className="flex flex-col">
+            <label htmlFor="comment" className="font-medium mb-1">
+              Commentaire :
+            </label>
+            <textarea
+              id="comment"
+              className="border rounded-md p-2 h-24 mb-4"
+              placeholder="Commentaire"
+            ></textarea>
+          </div>
+          <Button
+            type="submit"
+            label="Ajouter une séance photo"
+            icon={<PlusCircle />}
+          />
+        </div>
+      </form>
     );
   }
 }

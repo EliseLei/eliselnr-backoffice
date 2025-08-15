@@ -5,7 +5,7 @@ import { Camera, Users, Gift, CurrencyEuro } from "../Icons";
 class Dashboard extends Component {
   render() {
     return (
-      <div className="grid grid-cols-4 gap-6 py-6">
+      <div className="grid grid-cols-4 gap-6">
         <Statistique
           icon={<CurrencyEuro />}
           number="5600"

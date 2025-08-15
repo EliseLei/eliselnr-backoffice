@@ -11,7 +11,7 @@ class Statistique extends Component {
         </div>
         <p className="text-3xl font-bold">{number}</p>
         <p className="text-gray-500 text-sm">{title}</p>
-        <p className="text-green-500 text-xs mt-2">▲ {percent}%</p>
+        <p className="text-green text-xs mt-2">▲ {percent}%</p>
       </div>
     );
   }

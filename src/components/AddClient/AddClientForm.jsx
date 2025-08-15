@@ -13,7 +13,7 @@ class AddClientForm extends Component {
               <input
                 type="text"
                 placeholder="Nom"
-                className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+                className="w-full p-2 border rounded-lg"
               />
             </div>
             <div className="w-1/2">
@@ -21,7 +21,7 @@ class AddClientForm extends Component {
               <input
                 type="text"
                 placeholder="Prénom"
-                className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+                className="w-full p-2 border rounded-lg"
               />
             </div>
           </div>
@@ -32,7 +32,7 @@ class AddClientForm extends Component {
             <input
               type="email"
               placeholder="email@exemple.com"
-              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+              className="w-full p-2 border rounded-lg"
             />
           </div>
 
@@ -42,7 +42,7 @@ class AddClientForm extends Component {
             <input
               type="text"
               placeholder="Rue et numéro"
-              className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+              className="w-full p-2 border rounded-lg"
             />
           </div>
 
@@ -55,7 +55,7 @@ class AddClientForm extends Component {
               <input
                 type="text"
                 placeholder="75000"
-                className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+                className="w-full p-2 border rounded-lg"
               />
             </div>
             <div className="w-1/2">
@@ -63,11 +63,10 @@ class AddClientForm extends Component {
               <input
                 type="text"
                 placeholder="Paris"
-                className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+                className="w-full p-2 border rounded-lg"
               />
             </div>
           </div>
-
           <Button type="submit" label="Ajouter un client" />
         </form>
       </div>

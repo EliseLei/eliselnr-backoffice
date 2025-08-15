@@ -1,0 +1,1 @@
+export const photoPrice = 6
