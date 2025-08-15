@@ -1,6 +1,3 @@
-// src/icons/PencilSquare.jsx
-import React from "react";
-
 function PencilSquare({ className = "size-5", ...props }) {
   return (
     <svg
