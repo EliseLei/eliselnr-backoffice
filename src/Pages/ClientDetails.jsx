@@ -26,7 +26,13 @@ class ClientDetails extends Component {
       <div className="p-10">
         <h1>Info client : Pierre Dupont</h1>
 
-        <ClientInfo lastname="Dupont" firstname="Pierre" since="10/10/2010" />
+        <ClientInfo
+          lastname="Dupont"
+          firstname="Pierre"
+          email="pierre.dupont@gmail.com"
+          adresse="10 rue des Acacias 66000"
+          since="10/10/2010"
+        />
 
         <div className="mt-10 text-right">
           <h2>

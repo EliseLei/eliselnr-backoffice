@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ShootingType } from "../../enums/ShootingType";
+import { Button } from "..";
 
 class AddShootingPhotoForm extends Component {
   render() {
@@ -13,7 +14,6 @@ class AddShootingPhotoForm extends Component {
             <option value="charlotte">Charlotte</option>
             <option value="david">David</option>
           </select>
-
           <label htmlFor="shootingphotoType">Type de séance photo :</label>
           <select id="shootingphotoType" name="shootingphotoType">
             {Object.entries(ShootingType).map(([key, label]) => (
@@ -22,13 +22,9 @@ class AddShootingPhotoForm extends Component {
               </option>
             ))}
           </select>
-
           <label for="price">Prix :</label>
           <input id="price" type="number" placeholder="prix" />
-
-          <button type="submit" className="">
-            Ajouter une séance photo
-          </button>
+          <Button type="submit" label="Ajouter une séance photo" />
         </form>
       </>
     );
