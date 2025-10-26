@@ -57,14 +57,8 @@ class AddShootingPhotoForm extends Component {
 
           {/* Client */}
           <div className="flex flex-col">
-            <label htmlFor="prenom" className="font-medium mb-1">
-              Pour :
-            </label>
-            <select
-              id="prenom"
-              name="prenom"
-              className="border rounded-md p-2 focus:ring-2 focus:ring-primary"
-            >
+            <label for="prenom">Pour :</label>
+            <select id="prenom" name="prenom">
               <option value="">-- Sélectionner --</option>
               <option value="alice">Alice</option>
               <option value="benjamin">Benjamin</option>
@@ -75,14 +69,8 @@ class AddShootingPhotoForm extends Component {
 
           {/* Type séance */}
           <div className="flex flex-col">
-            <label for="shootingphotoType" className="font-medium mb-1">
-              Type de séance photo :
-            </label>
-            <select
-              id="shootingphotoType"
-              name="shootingphotoType"
-              className="border rounded-md p-2 focus:ring-2 focus:ring-primary"
-            >
+            <label for="shootingphotoType">Type de séance photo :</label>
+            <select id="shootingphotoType" name="shootingphotoType">
               <option value="">-- Sélectionner --</option>
               {Object.entries(ShootingType).map(([key, label]) => (
                 <option key={key} value={key}>
@@ -94,10 +82,8 @@ class AddShootingPhotoForm extends Component {
 
           {/* Carte cadeau */}
           <div className="flex flex-col">
-            <label htmlFor="carte" className="font-medium mb-1">
-              Carte cadeau :
-            </label>
-            <select id="carte" name="carte" className="border rounded-md p-2">
+            <label htmlFor="carte">Carte cadeau :</label>
+            <select id="carte" name="carte">
               <option value="">-- Aucun --</option>
               <option value="carte1">Carte cadeau 1</option>
               <option value="carte2">Carte cadeau 2</option>
@@ -111,24 +97,22 @@ class AddShootingPhotoForm extends Component {
 
           {/* Prix base */}
           <div className="flex flex-col">
-            <label className="font-medium mb-1">Prix de base :</label>
+            <label>Prix de base :</label>
             <input
               type="number"
               value={basePrice}
               onChange={this.handleBasePriceChange}
-              className="border rounded-md p-2 focus:ring-2 focus:ring-primary"
             />
           </div>
 
           {/* Réduction */}
           <div className="flex flex-col">
-            <label className="font-medium mb-1">Réduction :</label>
+            <label>Réduction :</label>
             <div className="flex gap-2">
               <input
                 type="number"
                 value={reduction}
                 onChange={this.handleReductionChange}
-                className="border rounded-md p-2 flex-1"
               />
               <Button
                 type="button"
@@ -140,14 +124,11 @@ class AddShootingPhotoForm extends Component {
 
           {/* Photos supplémentaires */}
           <div className="flex flex-col">
-            <label className="font-medium mb-1">
-              Photos supplémentaires ({photoPrice} € chacune) :
-            </label>
+            <label>Photos supplémentaires ({photoPrice} € chacune) :</label>
             <input
               type="number"
               value={extraPhotos}
               onChange={this.handleExtraPhotosChange}
-              className="border rounded-md p-2"
             />
           </div>
 
@@ -164,14 +145,8 @@ class AddShootingPhotoForm extends Component {
         <div className="bg-secondary p-6 mt-6">
           <h2>Autres</h2>
           <div className="flex flex-col">
-            <label htmlFor="comment" className="font-medium mb-1">
-              Commentaire :
-            </label>
-            <textarea
-              id="comment"
-              className="border rounded-md p-2 h-24 mb-4"
-              placeholder="Commentaire"
-            ></textarea>
+            <label htmlFor="comment">Commentaire :</label>
+            <textarea id="comment" placeholder="Commentaire"></textarea>
           </div>
           <Button
             type="submit"

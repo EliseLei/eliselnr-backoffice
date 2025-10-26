@@ -13,12 +13,14 @@
     --color-orange:#d38d6e;
     --color-red:#cf3d3d;
 
+    --border-radius:6px;
+
      /* Statuts photos */
     --status-deposit-paid: var(--color-green);      
     --status-session-to-schedule: var(--color-orange); 
     --status-session-scheduled: var(--color-green);  
     --status-selection-to-send: var(--color-orange); 
-    --status-selection-sended: var(--color-green);   
+    --status-selection-sent: var(--color-green);   
     --status-waiting-second-payment:var(--color-orange);
     --status-photos-to-edit: var(--color-orange);  
     --status-photos-sent: var(--color-green);        
@@ -33,7 +35,7 @@ select {
     background-color: var(--color-primary);
     color: var(--color-white);
     border: none;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     padding: 8px 12px;
     font-size: 14px;
     cursor: pointer;
@@ -44,12 +46,19 @@ select:hover {
     background-color: var(--color-primary-light);
 }
 
-input {
+label {
+    font-weight:500;
+    margin-bottom:4px;
+    font-size:14px;
+}
+
+input, textarea {
     background-color: var(--color-secondary);
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
-    border-radius: 6px;
-  /*  padding: 8px 12px; */
+    border-radius:  var(--border-radius);
+    width:100%;
+    padding: 8px 12px; 
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -92,14 +101,12 @@ input::placeholder {
     .bg-status-session-to-schedule { background-color: var(--status-session-to-schedule); }
     .bg-status-session-scheduled { background-color: var(--status-session-scheduled); }
     .bg-status-selection-to-send { background-color: var(--status-selection-to-send); }
-    .bg-status-selection-sended { background-color: var(--status-selection-sended); }
+    .bg-status-selection-sent { background-color: var(--status-selection-sent); }
     .bg-status-waiting-second-payment { background-color: var(--status-waiting-second-payment); }
     .bg-status-photos-to-edit { background-color: var(--status-photos-to-edit); }
     .bg-status-photos-sent { background-color: var(--status-photos-sent); }
     .bg-status-completed { background-color: var(--status-completed); }
 
-    /* Tu peux aussi faire une classe générique pour le texte blanc sur ces badges */
     .text-white { color: var(--color-white); }
     .rounded-badge { border-radius: 9999px; padding: 2px 8px; font-size: 12px; font-weight: bold; display: inline-block; }
-
 }

@@ -11,59 +11,38 @@ class AddClientForm extends Component {
 
           <div className="flex gap-4">
             <div className="w-1/2">
-              <label className="block text-sm font-medium mb-1">Nom</label>
-              <input
-                type="text"
-                placeholder="Nom"
-                className="w-full p-2 border rounded-lg"
-              />
+              <label>Nom</label>
+              <input type="text" placeholder="Nom" />
             </div>
             <div className="w-1/2">
-              <label className="block text-sm font-medium mb-1">Prénom</label>
-              <input
-                type="text"
-                placeholder="Prénom"
-                className="w-full p-2 border rounded-lg"
-              />
+              <label>Prénom</label>
+              <input type="text" placeholder="Prénom" />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Email</label>
-            <input
-              type="email"
-              placeholder="email@exemple.com"
-              className="w-full p-2 border rounded-lg"
-            />
+            <label>Email</label>
+            <input type="email" placeholder="email@exemple.com" />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Adresse</label>
-            <input
-              type="text"
-              placeholder="Rue et numéro"
-              className="w-full p-2 border rounded-lg"
-            />
+            <label>Adresse</label>
+            <input type="text" placeholder="Rue et numéro" />
+          </div>
+
+          <div>
+            <label>Date de naissance</label>
+            <input type="date" />
           </div>
 
           <div className="flex gap-4">
             <div className="w-1/2">
-              <label className="block text-sm font-medium mb-1">
-                Code postal
-              </label>
-              <input
-                type="text"
-                placeholder="75000"
-                className="w-full p-2 border rounded-lg"
-              />
+              <label>Code postal</label>
+              <input type="text" placeholder="75000" />
             </div>
             <div className="w-1/2">
-              <label className="block text-sm font-medium mb-1">Ville</label>
-              <input
-                type="text"
-                placeholder="Paris"
-                className="w-full p-2 border rounded-lg"
-              />
+              <label>Ville</label>
+              <input type="text" placeholder="Paris" />
             </div>
           </div>
         </div>
@@ -71,21 +50,16 @@ class AddClientForm extends Component {
         <div className="bg-secondary p-6">
           <h2>Communication</h2>
           <div className="gap-4">
-            <div className="">
-              <label className="block text-sm font-medium mb-1">
-                Réseau sociaux
-              </label>
+            <div>
+              <label>Réseau sociaux</label>
               <input
                 type="text"
                 placeholder="https://www.instagram.com/eliselnr_"
-                className="w-full p-2 border rounded-lg"
               />
             </div>
-            <div className="">
-              <label className="block text-sm font-medium mb-1">
-                Comment ce client m'a t-il connu ?
-              </label>
-              <select className="border rounded-md p-2 focus:ring-2 focus:ring-primary">
+            <div>
+              <label>Comment ce client m'a t-il connu ?</label>
+              <select>
                 <option value="">-- Sélectionner --</option>
                 {Object.entries(SourceClient).map(([key, label]) => (
                   <option key={key} value={key}>
@@ -95,12 +69,7 @@ class AddClientForm extends Component {
               </select>
 
               <label>Si autre est coché : </label>
-              <input
-                type="text"
-                placeholder="Autre"
-                classNa
-                me="w-full p-2 border rounded-lg"
-              />
+              <input type="text" placeholder="Autre" />
             </div>
           </div>
         </div>

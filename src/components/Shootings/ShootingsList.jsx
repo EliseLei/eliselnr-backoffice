@@ -40,7 +40,7 @@ class ShootingsList extends Component {
         firstname: "Dubois",
         price: 90,
         type: ShootingType.FORMULA_1P_10PHOTOS,
-        status: "SELECTION_SENDED",
+        status: "SELECTION_SENT",
       },
       {
         lastname: "Luc",
